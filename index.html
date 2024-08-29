@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/w3.css">
+    <!-- <link rel="stylesheet" href="css/w3.css"> 
+      Этот новый стиль не поддерживает w3-btn-block .
+      Он отдельно поддерживает w3-btn w3-block w3-black .
+    -->
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+      Этот новый стиль не поддерживает w3-btn-block .
+      Он отдельно поддерживает w3-btn w3-block w3-black .
+    -->
+
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"> -->
+    <link rel="stylesheet" href="css/w3-2017.css"> 
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Acme W3CSS</title>
 </head>
 <body>
     <!-- Navigation -->
-    <div class="w3-bar w3-black">
+    <div class="w3-top w3-bar w3-black">
         <span class="branding w3-bar-item w3-mobile">Acme Web Services</span>
         <span class="w3-right w3-mobile">
             <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Home</a>
@@ -49,5 +60,51 @@
       </div>
     </section>
     
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="w3-container">
+        <div class="w3-row-padding">
+          <div class="w3-col m5">
+            <img src="img/about.jpg">
+          </div>
+          <div class="w3-col m7">
+            <button onclick="accFunction('what')" class="w3-btn-block w3-left-align">
+            What We Do</button>
+
+            <div id="what" class="w3-container w3-show">
+              <h3>We Do It All</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <button onclick="accFunction('who')" class="w3-btn-block w3-left-align">
+            Who We Are</button>
+
+            <div id="who" class="w3-container w3-hide">
+              <h3>We Are Acme</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+            <button onclick="accFunction('where')" class="w3-btn-block w3-left-align">
+            Where We Are</button>
+
+            <div id="where" class="w3-container w3-hide">
+              <h3>We Are Everywhere</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      function accFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
 </body>
 </html>
