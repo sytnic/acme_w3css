@@ -38,7 +38,9 @@
         <h1 class="w3-text-shadow w3-animate-opacity">Go Anywhere</h1>
         <hr>
         <p class="w3-animate-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-        <button class="w3-button w3-red w3-large w3-opacity">Start Here</button>
+        <button 
+          onclick="document.getElementById('start-modal').style.display='block'" 
+          class="w3-button w3-red w3-large w3-opacity">Start Here</button>
       </div>
     </section>
 
@@ -167,6 +169,33 @@
       <p>ACME Web Services &copy; 2017</p>
     </footer>
 
+    <!-- MODAL -->
+    <div id="start-modal" class="w3-modal">
+      <div class="w3-modal-content">
+        <header class="w3-container w3-red">
+          <span onclick="document.getElementById('start-modal').style.display='none'" class="w3-closebtn">&times;</span>
+          <h2>Get Started</h2>
+        </header>
+
+        <div class="w3-container">
+          <form>
+            <div class="w3-section">
+              <label>Name</label>
+              <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Name">
+              <label>Username</label>
+              <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username">
+              <label>Password</label>
+              <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password">
+              <label>Confirm Password</label>
+              <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password">
+              
+              <button class="w3-black w3-btn-block w3-section w3-padding">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
     <script>
       function accFunction(id) {
         var x = document.getElementById(id);
